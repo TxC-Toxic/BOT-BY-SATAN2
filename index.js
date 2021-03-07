@@ -106,7 +106,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Hallo @${num.split('@')[0]}\Selamat datang di group *${mdata.subject}* yang betah ya di sini`
+				teks = `Hola @${num.split('@')[0]}\Bienvenido al grupo*${mdata.subject}* Ojala aprendas con nosotros`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -209,7 +209,7 @@ client.on('group-participants-update', async (anu) => {
 					bisakah = body.slice(1)
 					const bisa =['Bisa','Tidak Bisa','Coba Ulangi']
 					const keh = bisa[Math.floor(Math.random() * bisa.length)]
-					client.sendMessage(from, 'Pertanyaan : *'+bisakah+'*\n\nJawaban : '+ keh, text, { quoted: mek })
+					client.sendMessage(from, 'Texto : *'+bisakah+'*\n\nPorcentaje: '+ keh, text, { quoted: mek })
 					break
 				case 'kapankah':
 					kapankah = body.slice(1)
@@ -227,7 +227,7 @@ client.on('group-participants-update', async (anu) => {
 					rate = body.slice(1)
 					const ra =['1','5','13','28','34','48','59','62','74','83','97','100','29','94','75','82','41','39']
 					const te = ra[Math.floor(Math.random() * ra.length)]
-					client.sendMessage(from, 'Pertanyaan : *'+rate+'*\n\nJawaban : '+ te+'%', text, { quoted: mek })
+					client.sendMessage(from, 'Pregunta : *'+rate+'*\n\nPorcentaje : '+ te+'%', text, { quoted: mek })
 					break
           case 'speed':
           case 'ping':
