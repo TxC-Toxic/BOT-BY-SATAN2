@@ -445,7 +445,7 @@ client.on('group-participants-update', async (anu) => {
                 case 'text3d':
               	    if (args.length < 1) return reply('Ingresa texto')
                     teks = `${body.slice(8)}`
-                    if (teks.length > 10) return client.sendMessage(from, 'Teksnya kepanjangan, Maksimal 10 kalimat', text, {quoted: mek})
+                    if (teks.length > 10) return client.sendMessage(from, 'Ingresa un texto de menos de 10 caracteres', text, {quoted: mek})
                     buff = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${teks}`, {method: 'get'})
                     client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
 			     	break
